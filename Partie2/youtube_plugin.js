@@ -10,10 +10,10 @@ function YoutubePlugin () {
 	this.youtube.addParam('type', 'video');
 };
 
-
-YoutubePlugin.prototype.respond = function (query, channel, bot) {
+YoutubePlugin.prototype.respond = function (query, channel, client) {
 	this.youtube.search(query, 1, function(error, result) {
 			if (error) {
+
 				channel.sendMessage("¯\\_(ツ)_/¯");
 			}
 			else {
