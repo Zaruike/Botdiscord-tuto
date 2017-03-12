@@ -310,7 +310,7 @@ if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
 }
 kickMember.kick().then(member => {
     message.channel.sendMessage("", {embed: {
-          title: "Erreur:",
+          title: "Succès :white_check_mark:",
           color: 0xff0000,
           description: `${member.user.username}`+` à bien été kick`,
           footer: {
@@ -385,8 +385,8 @@ if(message.mentions.users.size === 0) {
           }
         }}).catch(console.error);
 }
-let kickMember = message.guild.member(message.mentions.users.first());
-if(!kickMember) {
+let banMember = message.guild.member(message.mentions.users.first());
+if(!banMember) {
   return message.channel.sendMessage("", {embed: {
           title: "Erreur:",
           color: 0xff0000,
@@ -399,9 +399,9 @@ if(!kickMember) {
 if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
   return message.reply("Je n'ai pas la permissions ** __(BAN_MEMBERS)__ **!").catch(console.error);
 }
-kickMember.kick().then(member => {
+banMember.kick().then(member => {
     message.channel.sendMessage("", {embed: {
-          title: "Erreur:",
+          title: "Succès :white_check_mark:",
           color: 0xff0000,
           description: `${member.user.username}`+` à bien été ban`,
           footer: {
@@ -414,11 +414,11 @@ kickMember.kick().then(member => {
           description: '',
           fields: [{
             name: '**L\'utilisateur <~>**',
-            value: kickMember.user.username,
+            value: banMember.user.username,
             inline: true
           }, {
             name: 'User id',
-            value: kickMember.id,
+            value: banMember.id,
             inline: true
           },{
             name: '**Action <~>**',
@@ -437,7 +437,7 @@ kickMember.kick().then(member => {
           },
 
           author: { 
-            name: kickMember.user.username + "#"+ kickMember.user.discriminator,
+            name: banMember.user.username + "#"+ banMember.user.discriminator,
             icon_url: " ",
             proxy_icon_url: ' '
           }
