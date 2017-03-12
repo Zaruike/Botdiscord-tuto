@@ -310,7 +310,7 @@ if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
 }
 kickMember.kick().then(member => {
     message.channel.sendMessage("", {embed: {
-          title: "Erreur:",
+          title: "Succès :white_check_mark:",
           color: 0xff0000,
           description: `${member.user.username}`+` à bien été kick`,
           footer: {
@@ -401,7 +401,7 @@ if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
 }
 banMember.kick().then(member => {
     message.channel.sendMessage("", {embed: {
-          title: "Erreur:",
+          title: "Succès :white_check_mark:",
           color: 0xff0000,
           description: `${member.user.username}`+` à bien été ban`,
           footer: {
