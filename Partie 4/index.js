@@ -308,6 +308,19 @@ if(!kickMember) {
 if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
   return message.reply("Je n'ai pas la permissions ** __(KICK_MEMBERS)__ **!").catch(console.error);
 }
+         if(!message.guild.channels.exists("name", "admin-logs")){
+// créer le channel
+message.guild.createChannel('admin-logs');
+// Affiche un message d'erreur expliquant que le channel n'existait pas
+return message.channel.sendMessage("", {embed: {
+title: "Erreur:",
+color: 0xff0000,
+description: " :no_entry_sign: Le salon textuel `admin-logs` n'existait pas, je viens de le créer pour vous :white_check_mark: , Veuillez réessayer :wink:",
+footer: {
+text: "Message par Emiliabot."
+}
+}}).catch(console.error);
+}   
 kickMember.kick().then(member => {
     message.channel.sendMessage("", {embed: {
           title: "Succès :white_check_mark:",
@@ -399,6 +412,19 @@ if(!banMember) {
 if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
   return message.reply("Je n'ai pas la permissions ** __(BAN_MEMBERS)__ **!").catch(console.error);
 }
+         if(!message.guild.channels.exists("name", "admin-logs")){
+// créer le channel
+message.guild.createChannel('admin-logs');
+// Affiche un message d'erreur expliquant que le channel n'existait pas
+return message.channel.sendMessage("", {embed: {
+title: "Erreur:",
+color: 0xff0000,
+description: " :no_entry_sign: Le salon textuel `admin-logs` n'existait pas, je viens de le créer pour vous :white_check_mark: , Veuillez réessayer :wink:",
+footer: {
+text: "Message par Emiliabot."
+}
+}}).catch(console.error);
+}   
 banMember.kick().then(member => {
     message.channel.sendMessage("", {embed: {
           title: "Succès :white_check_mark:",
@@ -490,6 +516,19 @@ banMember.kick().then(member => {
       if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) {
         return message.reply("Je n'ai pas la permissions pour faire cela __(MANAGE_MESSAGES)__ !").catch(console.error);
       }
+         if(!message.guild.channels.exists("name", "admin-logs")){
+// créer le channel
+message.guild.createChannel('admin-logs');
+// Affiche un message d'erreur expliquant que le channel n'existait pas
+return message.channel.sendMessage("", {embed: {
+title: "Erreur:",
+color: 0xff0000,
+description: " :no_entry_sign: Le salon textuel `admin-logs` n'existait pas, je viens de le créer pour vous :white_check_mark: , Veuillez réessayer :wink:",
+footer: {
+text: "Message par Emiliabot."
+}
+}}).catch(console.error);
+}     
 let mutedRole = message.guild.roles.find("name", "mute");
     var time = 500000;
     console.log(muteMember);
@@ -594,6 +633,19 @@ let mutedRole = message.guild.roles.find("name", "mute");
       if(!message.guild.member(client.user).hasPermission("MANAGE_MESSAGES")) {
         return message.reply("Je n'ai pas la permissions pour faire cela __(MANAGE_MESSAGES)__ !").catch(console.error);
       }
+         if(!message.guild.channels.exists("name", "admin-logs")){
+// créer le channel
+message.guild.createChannel('admin-logs');
+// Affiche un message d'erreur expliquant que le channel n'existait pas
+return message.channel.sendMessage("", {embed: {
+title: "Erreur:",
+color: 0xff0000,
+description: " :no_entry_sign: Le salon textuel `admin-logs` n'existait pas, je viens de le créer pour vous :white_check_mark: , Veuillez réessayer :wink:",
+footer: {
+text: "Message par Emiliabot."
+}
+}}).catch(console.error);
+}   
 let mutedRole = message.guild.roles.find("name", "mute");
     var time = 500000;
     console.log(muteMember);
