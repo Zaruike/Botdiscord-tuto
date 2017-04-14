@@ -1,0 +1,28 @@
+{
+  "name": "emilia",
+  "version": "1.0.0",
+  "description": "Emilia 2.0",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.0.1",
+    "express": "^4.15.2",
+    "ffmpeg": "0.0.4",
+    "forever": "^0.15.3",
+    "google": "^2.1.0",
+    "moment": "^2.18.1",
+    "random-puppy": "^1.1.0",
+    "random-word": "^2.0.0",
+    "random-word-fr": "^1.0.3",
+    "unirest": "^0.5.1",
+    "uws": "^0.14.1",
+    "wikijs": "^2.1.5",
+    "youtube-search": "^1.0.9",
+    "ytdl-core": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silver Crow",
+  "license": "MIT"
+}
