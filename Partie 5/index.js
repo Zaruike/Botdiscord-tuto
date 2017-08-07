@@ -427,7 +427,7 @@ text: "Message par Emiliabot."
 }
 }}).catch(console.error);
 }   
-banMember.kick().then(member => {
+banMember.ban().then(member => {
     message.channel.sendMessage("", {embed: {
           title: "Succès :white_check_mark:",
           color: 0xff0000,
